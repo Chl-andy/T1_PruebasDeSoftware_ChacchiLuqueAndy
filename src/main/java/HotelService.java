@@ -37,4 +37,8 @@ public class HotelService {
         return nombre.matches("[a-zA-Z]{4,}");
     }
 
+    private boolean fechaValida(LocalDate fecha) {
+        return fecha.isAfter(LocalDate.now());
+    }
+
 }

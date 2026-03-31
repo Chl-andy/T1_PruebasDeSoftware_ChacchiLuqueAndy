@@ -9,7 +9,10 @@ class HotelServiceTest {
     @Test
     void testFechaInvalida() {
         HotelService service = new HotelService();
+
         String resultado = service.registrarHabitacion("101", "Carlos", LocalDate.now());
+
+        System.out.println("Resultado: " + resultado);
         assertEquals("Debe ingresar una fecha valida", resultado);
     }
 }
