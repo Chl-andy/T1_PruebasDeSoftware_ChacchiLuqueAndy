@@ -22,4 +22,6 @@ public class HotelService {
 
         return "El registro ha sido exitoso";
     }
+
+
 }
