@@ -7,12 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class HotelServiceTest {
 
     @Test
-    void testRegistroExitoso() {
+    void testNumeroHabitacionConLetras() {
         HotelService service = new HotelService();
 
-        String resultado = service.registrarHabitacion("101", "Carlos", LocalDate.now().plusDays(2));
+        String resultado = service.registrarHabitacion("1A3", "Carlos", LocalDate.now().plusDays(1));
 
         System.out.println("Resultado: " + resultado);
-        assertEquals("El registro ha sido exitoso", resultado);
+        assertEquals("Ingrese una habitación valida", resultado);
+
     }
 }
