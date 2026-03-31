@@ -7,12 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class HotelServiceTest {
 
     @Test
-    void testFechaInvalida() {
+    void testRegistroExitoso() {
         HotelService service = new HotelService();
 
-        String resultado = service.registrarHabitacion("101", "Carlos", LocalDate.now());
+        String resultado = service.registrarHabitacion("101", "Carlos", LocalDate.now().plusDays(2));
 
         System.out.println("Resultado: " + resultado);
-        assertEquals("Debe ingresar una fecha valida", resultado);
+        assertEquals("El registro ha sido exitoso", resultado);
     }
 }
