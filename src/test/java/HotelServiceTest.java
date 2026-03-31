@@ -16,12 +16,15 @@ class HotelServiceTest {
     }
 
     public String registrarHabitacion(String numero, String nombre, LocalDate fecha) {
-        if (numero.isEmpty() || nombre.isEmpty() || fecha == null) {
-            System.out.println("Debe ingresar los datos requeridos");
+        if (camposVacios(numero, nombre, fecha)) {
+            return "Debe ingresar los datos requeridos";
         }
+
         return "";
     }
 
-
+    private boolean camposVacios(String numero, String nombre, LocalDate fecha) {
+        return numero == null || numero.isEmpty() || nombre == null || nombre.isEmpty() || fecha == null;
+    }
 
 }
