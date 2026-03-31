@@ -23,4 +23,14 @@ public class HotelService {
         return "El registro ha sido exitoso";
     }
 
+    private boolean camposVacios(String numero, String nombre, LocalDate fecha) {
+        return numero == null || numero.isEmpty() ||
+                nombre == null || nombre.isEmpty() ||
+                fecha == null;
+    }
+
+    private boolean numeroHabitacionValido(String numero) {
+        return numero.matches("[1-3][0-9]{2}");
+    }
+
 }
