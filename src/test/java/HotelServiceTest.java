@@ -7,13 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class HotelServiceTest {
 
     @Test
-    void testNumeroHabitacionInvalido() {
+    void testNombreClienteInvalido() {
         HotelService service = new HotelService();
+        String resultado = service.registrarHabitacion("101", "Ana", LocalDate.now().plusDays(1));
 
-        String resultado = service.registrarHabitacion("401", "Carlos", LocalDate.now().plusDays(1));
-
-        System.out.println("Resultado: " + resultado);
-        assertEquals("Ingrese una habitación valida", resultado);
-
+        assertEquals("Recuerde que el nombre del cliente debe contener al menos cuatro caracteres", resultado);
     }
 }

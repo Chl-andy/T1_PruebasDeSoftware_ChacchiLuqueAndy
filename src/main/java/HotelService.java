@@ -33,4 +33,8 @@ public class HotelService {
         return numero.matches("[1-3][0-9]{2}");
     }
 
+    private boolean nombreValido(String nombre) {
+        return nombre.matches("[a-zA-Z]{4,}");
+    }
+
 }
